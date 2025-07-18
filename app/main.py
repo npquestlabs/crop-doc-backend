@@ -29,13 +29,6 @@ async def predict(file: UploadFile = File(...)):
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Prediction failed: {str(e)}")
     
-
-@app.post("/predict", response_model=PredictionResponse)
-async def predict(file: UploadFile = File(...)):
-    image = read_imagefile(await file.read())
-    predicted_label, confidence = predict_image(image, model, class_labels)
-    return {"label": predicted_label, "confidence": confidence}
-
 app.include_router(scan.router, prefix="/scan", tags=["Scan"])
 
 app.include_router(disease.router, prefix="/diseases", tags=["Diseases"])
