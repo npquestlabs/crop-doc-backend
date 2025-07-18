@@ -19,7 +19,7 @@ CropDoc is a backend service built with **FastAPI** for crop disease detection, 
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/crop-doc-backend.git
+git clone https://github.com/npquestlabs/crop-doc-backend.git
 cd crop-doc-backend
 ```
 
