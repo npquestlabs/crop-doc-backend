@@ -23,28 +23,52 @@ git clone https://github.com/npquestlabs/crop-doc-backend.git
 cd crop-doc-backend
 ```
 
-### 2. Install Dependencies
-
-Create a virtual environment and install requirements:
+### 2. Create and Activate Virtual Environment
 
 ```bash
 python3 -m venv venv
-source venv/bin/activate   # For Linux/Mac
-venv\Scripts\activate      # For Windows
-
-pip install -r requirements.txt
+source venv/bin/activate   # Linux/Mac
+venv\Scripts\activate      # Windows
 ```
 
 ---
 
-### 3. Environment Variables
+### 3. Install Dependencies
+
+#### **Important: Manual PyTorch Installation**
+
+Due to compatibility reasons, you need to install PyTorch manually before installing the rest of the dependencies.
+
+1. **Edit `requirements.txt`**
+   Remove these lines if present:
+
+   ```
+   torch==2.4.1+cpu
+   torchvision==0.19.1+cpu
+   ```
+
+2. **Install PyTorch (CPU build)**
+
+   ```bash
+   pip install torch==2.6.0+cpu torchvision==0.21.0+cpu --index-url https://download.pytorch.org/whl/cpu
+   ```
+
+3. **Install Remaining Packages**
+
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+---
+
+### 4. Environment Variables
 
 The application requires a `.env` file with configurations for Supabase and Gemini API keys.
 **To obtain the `.env` file, contact the developer.**
 
 ---
 
-### 4. Run the Application
+### 5. Run the Application
 
 Start the FastAPI server:
 
