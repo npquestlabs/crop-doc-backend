@@ -2,7 +2,7 @@ import torch
 from PIL import Image
 import os
 import requests
-from app.utils.utils import preprocess_image
+from utils.utils import preprocess_image
 import timm
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
