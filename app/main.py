@@ -1,9 +1,9 @@
 from fastapi import FastAPI, File, UploadFile, HTTPException
-from app.model import load_model, predict_image
-from app.schemas import PredictionResponse
+from model import load_model, predict_image
+from schemas import PredictionResponse
 from fastapi.middleware.cors import CORSMiddleware
-from app.utils.utils import read_imagefile, read_image
-from app.routers import scan, disease, chat
+from utils.utils import read_imagefile, read_image
+from routers import scan, disease, chat
 
 app = FastAPI()
 
