@@ -1,8 +1,8 @@
 from fastapi import APIRouter, HTTPException, Query
-from app.utils.utils import validate_uuid
+from utils.utils import validate_uuid
 from typing import List
-from app.schemas import Disease
-from app.core.supabase import (
+from schemas import Disease
+from core.supabase import (
     get_all_diseases,
     get_disease_by_id,
     search_diseases,
