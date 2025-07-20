@@ -1,6 +1,6 @@
 from fastapi import APIRouter, HTTPException
-from app.schemas import ChatRequest, ChatResponse
-from app.core.get_ai_chat_response import get_gemini_response
+from schemas import ChatRequest, ChatResponse
+from core.get_ai_chat_response import get_gemini_response
 
 router = APIRouter()
 
