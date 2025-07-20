@@ -1,11 +1,11 @@
 from fastapi import APIRouter, File, UploadFile, HTTPException, Depends
-from app.schemas import DiseaseInfo, ScanResponse, ScanInfo, Feedback
+from schemas import DiseaseInfo, ScanResponse, ScanInfo, Feedback
 from typing import List
-from app.model import load_model, predict_image
-from app.utils.utils import read_imagefile
-from app.utils.get_current_user import get_current_user
-from app.core.supabase import upload_image_to_supabase, get_or_save_disease_info, get_user_scan_history, get_scan_by_id, delete_scan, save_scan_result, add_scan_feedback
-from app.core.request_disease_info import get_more_info
+from model import load_model, predict_image
+from utils.utils import read_imagefile
+from utils.get_current_user import get_current_user
+from core.supabase import upload_image_to_supabase, get_or_save_disease_info, get_user_scan_history, get_scan_by_id, delete_scan, save_scan_result, add_scan_feedback
+from core.request_disease_info import get_more_info
 
 router = APIRouter()
 
