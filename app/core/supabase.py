@@ -5,7 +5,7 @@ from datetime import datetime
 import uuid
 from datetime import datetime
 from dotenv import load_dotenv
-from app.schemas import DiseaseInfo
+from schemas import DiseaseInfo
 from fastapi import HTTPException
 
 load_dotenv()
